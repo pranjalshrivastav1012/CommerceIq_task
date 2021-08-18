@@ -1,4 +1,4 @@
-# Virtual Keyboard
+# Virtual Random Keyboard
 
 It is virtual keyboard made using VUE .It consists of a new added feature different from a usual keyboard. It rearranges its keys .
 ## Available Scripts
@@ -7,7 +7,7 @@ It is virtual keyboard made using VUE .It consists of a new added feature differ
 ![alt text](https://i.imgur.com/ZPQaWMg.png)
 
 # Demo
-
+https://youthful-kirch-bf3865.netlify.app/
  
 ## Installation  and Setup Instructions
 Clone down this repository. You will need node and npm installed globally on your machine.
