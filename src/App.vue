@@ -5,13 +5,12 @@ Vue.component('home' , {
 <template>
 <div class="nav-bar"></div>
 <div class="main">
-  
    <Home/>
    <textarea
-      autoFocus="true"
+      autofocus
       type="text"
       v-model="input"
-      className="jumbotron"/>
+      class="jumbotron"/>
   
    <div class="keyboard">
     <div class="keys" v-for="(i) in items" :key="i.id" >
@@ -192,7 +191,7 @@ export default {
 
 <style>
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -200,8 +199,17 @@ export default {
   position: relative;
   
 }
+.jumbotron{
+ 
+  margin-top: 120px;
+  height: 90px;
+  width: 90%;
+  font-size: 20px;
+  
+}
 
-.nav-bar {
+.nav-bar {  
+  position: absolute;
   background: linear-gradient(-90deg, #26a030, #33675C);
   height: 60px;
   margin-bottom: 25px;
@@ -218,15 +226,12 @@ export default {
     flex-direction: row;
     bottom: 40px;
     margin-left:70px;
-    /* position: relative;     */
-  
-   
-    /* background: black;           */
 }
 .key_button{
  
  height: 65px;
     width: 65px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,11 +253,13 @@ export default {
 
 .keyboard{
   display: flex;
+  justify-content: center;
+  align-content: center;
   flex-direction: column;
   position: fixed;
   bottom: 0;
   right: 0;
-  margin-right: 300px;
+  margin-right: 350px;
   
   
 } 
@@ -264,7 +271,8 @@ export default {
    height: 65px;
   width: 90px;
     display: flex;
-    justify-content: left;
+   justify-content: center;
+      align-items: center;
     
     background-color: white;
     margin: 3px;
@@ -284,7 +292,8 @@ export default {
    height: 65px;
   width: 80px;
     display: flex;
-     justify-content: left;
+     justify-content: center;
+      align-items: center;
     background-color: white;
     margin: 3px;
     border-radius: 4px;
@@ -321,7 +330,8 @@ export default {
     height: 65px;
   width: 75px;
   display: flex;
-     justify-content: left;
+     justify-content: center;
+      align-items: center;
     background-color: white;
     margin: 3px;
     border-radius: 4px;
@@ -341,7 +351,8 @@ export default {
 height: 65px;
   width: 80px;
   display: flex;
-     justify-content: left;
+     justify-content: center;
+      align-items: center;
     background-color: white;
     margin: 3px;
     border-radius: 4px;
@@ -359,7 +370,8 @@ height: 65px;
 height: 65px;
   width: 50px;
   display: flex;
-     justify-content: left;
+     justify-content: center;
+      align-items: center;
     background-color: white;
     margin: 3px;
     margin-left: 74px;
