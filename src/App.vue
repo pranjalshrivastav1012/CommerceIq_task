@@ -5,9 +5,9 @@ Vue.component('home' , {
 <template>
 <div class="nav-bar"></div>
 <div class="main">
-   <Home/>
+   <Header/>
    <textarea
-      autofocus
+      ref='focusMe'
       type="text"
       v-model="input"
       class="jumbotron"/>
@@ -72,7 +72,7 @@ Vue.component('home' , {
 
 <script>
 
-import Home from './components/Home.vue'
+import Header from './components/Home.vue'
 
 export default {
   name: 'App',
@@ -88,10 +88,18 @@ export default {
     }
   },
   components: {
-    Home,
+    Header,
     
   
     // Button 
+  },
+  
+  mounted () {
+
+    setTimeout(() => {
+       this.$refs.focusMe.focus();
+    }, 1);
+
   },
   methods:{
     shuffleLetters(){
@@ -124,6 +132,7 @@ export default {
           this.shiftFlag = false
           this.onShiftPress(this.shiftFlag)
         }
+         
     },
     onTabPress(){
       var vm = this
@@ -169,21 +178,24 @@ export default {
           }
         }
       }
-      if(flag){
-        this.onCapsPress()
-        document.getElementById("shift").style.background = "#33675C";
-      } else {
-        this.onCapsPress()
-        document.getElementById("shift").style.background = "rgba(38, 160, 48, 0.2)";
-      }
       this.shiftFlag = flag
+      if(flag){
+        document.getElementById("shift").style.background = "#33675C";
+        this.onCapsPress()
+         document.getElementById("capslock").style.background = "rgba(38, 160, 48, 0.2)";
+      } else {
+        document.getElementById("shift").style.background = "rgba(38, 160, 48, 0.2)";
+        this.onCapsPress()
+      }
+      
     },formatLetters(flag, j){
       if(flag){
         return j.toUpperCase()
       } else {
         return j.toLowerCase()
       }
-    }
+    },
+    
   }
 }
 </script>
@@ -205,7 +217,6 @@ export default {
   height: 90px;
   width: 90%;
   font-size: 20px;
-  
 }
 
 .nav-bar {  
