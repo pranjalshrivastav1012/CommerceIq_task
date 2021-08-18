@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
-Vue.component('App' , {
+
 
 
 <template>
 <div class="nav-bar"></div>
 <div class="main">
-   <Header/>
+   <Home/>
    <textarea
       ref='focusMe'
       type="text"
@@ -68,7 +68,7 @@ Vue.component('App' , {
 
 <script>
 
-import Header from './components/Home.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'App',
@@ -84,7 +84,7 @@ export default {
     }
   },
   components: {
-    Header,
+    Home,
     
   
     // Button 
@@ -128,7 +128,7 @@ export default {
           this.shiftFlag = false
           this.onShiftPress(this.shiftFlag)
         }
-         
+         this.mounted()
     },
     onTabPress(){
       var vm = this
@@ -195,7 +195,7 @@ export default {
   }
 }
 </script>
-})
+
 
 <style>
 #app {
