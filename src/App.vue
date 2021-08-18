@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-Vue.component('home' , {
+Vue.component('App' , {
 
 
 <template>
@@ -61,10 +61,6 @@ Vue.component('home' , {
       @click="onEnterPress()"
 
       >enter</Button>
-      
-      
-      
-    
     </div>
     </div> 
 </div> 

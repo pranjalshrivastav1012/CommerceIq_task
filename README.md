@@ -1,24 +1,28 @@
-# commerceiq-task
+# Virtual Keyboard
 
-## Project setup
-```
-npm install
-```
+It is virtual keyboard made using VUE .It consists of a new added feature different from a usual keyboard. It rearranges its keys .
+## Available Scripts
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Preview 
+![alt text](https://i.imgur.com/ZPQaWMg.png)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# Demo
 
-### Lints and fixes files
-```
-npm run lint
-```
+ 
+## Installation  and Setup Instructions
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Installation:
+ `npm install`
+## 
+ To start server:
+`npm run serve`
+
+Runs the app in the development mode.
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+
+
